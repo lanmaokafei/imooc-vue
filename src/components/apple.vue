@@ -2,6 +2,7 @@
   <div class="hello">
       <h1>{{msg}}</h1>
       <p>{{ $route.params.color }}</p>
+      <p>{{ $route.params.type }}</p>
       <button @click="getParam">get param</button>
   </div>
 </template>

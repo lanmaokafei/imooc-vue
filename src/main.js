@@ -15,7 +15,7 @@ let router = new VRouter({
   // mode: 'history', //开启#模式
   routes:[
     {
-      path:'/apple/:color',
+      path:'/apple/:color/detail/:type',
       component:Apple
     },
     {
