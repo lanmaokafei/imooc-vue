@@ -1,8 +1,6 @@
 <template>
   <div class="hello">
       <h1>{{msg}}</h1>
-      <p>{{ $route.params.color }}</p>
-      <p>{{ $route.params.type }}</p>
       <button @click="getParam">get param</button>
       <router-view></router-view>
   </div>
@@ -13,7 +11,7 @@ export default {
   name:'hello',
   data () {
       return{
-          msg:'今天大暴雨'
+          msg:'今天雷暴雨'
       }
   },
   methods:{

@@ -5,6 +5,7 @@ import App from './App'
 import VRouter from 'vue-router'
 import Apple from './components/apple'
 import Banana from './components/banana'
+import RedApple from './components/redapple'
 
 Vue.use(VRouter)
 
@@ -15,8 +16,14 @@ let router = new VRouter({
   // mode: 'history', //开启#模式
   routes:[
     {
-      path:'/apple/:color/detail/:type',
-      component:Apple
+      path:'/apple',
+      component:Apple,
+      children:[
+        {
+          path:'red',
+          component:RedApple
+        }
+      ]
     },
     {
       path:'/banana',
