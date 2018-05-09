@@ -7,6 +7,7 @@ import Vuex from 'vuex'
 import Apple from './components/apple'
 import Banana from './components/banana'
 import RedApple from './components/redapple'
+import ShopCart from './components/shopcart'
 
 // 注册
 Vue.use(VRouter)
@@ -73,6 +74,10 @@ let router = new VRouter({
       path:'/banana',
       component:Banana
     },
+    {
+      path:'/cart',
+      component:ShopCart
+    }
   ]
 })
 

@@ -25,13 +25,15 @@
 import HelloWorld from './components/HelloWorld'
 import Apple from './components/apple'
 import Banana from './components/banana'
+import ShopCart from './components/shopcart'
 
 export default {
   name: 'App',
   components: {
     HelloWorld,
     Apple,
-    Banana
+    Banana,
+    ShopCart
   },
   computed:{
     totalPrice (){
