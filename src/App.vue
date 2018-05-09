@@ -3,10 +3,18 @@
     <img src="./assets/logo.png">
     <!-- <router-view name="viewA"></router-view> -->
     <!-- <router-view name="viewB"></router-view> -->
-    <router-view></router-view>
+    <!-- 动画过渡 -->
+    <transition name="fade">
+      <!-- 缓存 -->
+      <keep-alive>
+        <router-view></router-view>
+      </keep-alive>
+      <!-- 缓存 -->
+    </transition>
+    <!-- 动画过渡 -->
     <router-link :to="{name:'applePage'}">to apple</router-link>
     <router-link :to="{path:'/banana', param:{color:'yellow'}}">to banana</router-link>
-    <router-link :to="{path:'apple/red'}">to redapple</router-link>
+    <router-link :to="{path:'/apple/red'}">to redapple</router-link>
   </div>
 </template>
 
