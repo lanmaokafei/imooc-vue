@@ -19,7 +19,14 @@ let store = new Vuex.Store({
     state:{
       totalPrice: 0
     },
+    getters:{
+      // 获取状态集里的数据
+      getTotal(state){
+          return state.totalPrice
+      }
+    },
     mutations:{
+      // 与actions区别在于，该方法为同步操作
       // 增加
       increment (state, price){
         state.totalPrice += price
@@ -30,8 +37,14 @@ let store = new Vuex.Store({
       }
     },
     actions:{
+      // 可以执行异步操作，API接口必须放在actions中
       increment (context, price) {
-        context.commit('increment', price)
+      // increment (context, id) {
+        // 使用产品id通过API获取产品价格后在操作
+        // api(id, function(price){
+        //   context.commit('increment', price)
+        // })
+          context.commit('increment', price)
       }
     }
 })
