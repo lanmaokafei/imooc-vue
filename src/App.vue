@@ -1,10 +1,11 @@
 <template>
   <div id="app">
     <img src="./assets/logo.png">
+    <!-- <router-view name="viewA"></router-view> -->
+    <!-- <router-view name="viewB"></router-view> -->
     <router-view></router-view>
-
-    <router-link :to="{path:'apple'}">to apple</router-link>
-    <router-link :to="{path:'banana'}">to banana</router-link>
+    <router-link :to="{name:'applePage'}">to apple</router-link>
+    <router-link :to="{path:'/banana', param:{color:'yellow'}}">to banana</router-link>
     <router-link :to="{path:'apple/red'}">to redapple</router-link>
   </div>
 </template>

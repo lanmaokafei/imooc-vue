@@ -13,11 +13,17 @@ Vue.config.productionTip = false
 
 //实例化路由
 let router = new VRouter({
-  // mode: 'history', //开启#模式
+  // mode: 'history', //关闭路径#模式
   routes:[
+    {
+      //路由重定向
+      path:'/',
+      redirect:'/apple'
+    },
     {
       path:'/apple',
       component:Apple,
+      name:'applePage',
       children:[
         {
           path:'red',
