@@ -4,6 +4,9 @@
       <p>{{ $route.params.color }}</p>
       <p>{{ $route.params.type }}</p>
       <button @click="getParam">get param</button>
+
+      <button @click="addOne">add one</button>
+      <button @click="minusOne">minus one</button>
       <router-view></router-view>
   </div>
 </template>
@@ -13,12 +16,19 @@ export default {
   name:'hello',
   data () {
       return{
-          msg:'今天大暴雨'
+          msg:'今天大暴雨',
+          price: 5
       }
   },
   methods:{
       getParam () {
           console.log(this.$route.params);
+      },
+      addOne(){
+          this.$store.dispatch('increment', this.price)
+      },
+      minusOne(){
+          this.$store.commit('decrement', this.price)
       }
   }
 }

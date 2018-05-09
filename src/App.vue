@@ -15,16 +15,28 @@
     <router-link :to="{name:'applePage'}">to apple</router-link>
     <router-link :to="{path:'/banana', param:{color:'yellow'}}">to banana</router-link>
     <router-link :to="{path:'/apple/red'}">to redapple</router-link>
+    {{ totalPrice }}
+    <apple></apple>
+    <banana></banana>
   </div>
 </template>
 
 <script>
 import HelloWorld from './components/HelloWorld'
+import Apple from './components/apple'
+import Banana from './components/banana'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    HelloWorld,
+    Apple,
+    Banana
+  },
+  computed:{
+    totalPrice (){
+      return this.$store.state.totalPrice
+    }
   }
 }
 </script>
